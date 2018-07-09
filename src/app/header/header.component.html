@@ -1,0 +1,32 @@
+<div class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">LizzyList</a>
+    </div>
+    <div class="collapse navbar-collapse"> <!-- Add hamburger menu later -->
+      <ul class="nav navbar-nav">
+        <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
+        <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p class="navbar-text">Signed in as <a href="#" class="navbar-link">{{name}}</a></p>
+        <li class="dropdown" appDropdown>
+            <a href="#" class="dropdown-toggle" role="button">Settings <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="jumbotron">
+    <div class="container">
+      <div class="col-md-8">
+          <h1>Welcome to {{title}}</h1>
+          <p>{{desc}}</p>
+      </div>
+    </div>
+</div>
+
