@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Response } from '@angular/http';
 import { DataStorageService } from 'src/app/shared/data-storage.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 
 @Component({
@@ -13,7 +14,9 @@ export class HeaderComponent {
   name = 'Elizabeth Hill';
   desc = `LizzyList is a recipe book and shopping app built for my lovely wife Elizabeth Hill.
           This way she can get off my case about grocery shopping`;
-  constructor(private dataStorageService: DataStorageService) {}
+  constructor(private dataStorageService: DataStorageService,
+              private authService: AuthService) {}
+
   onSaveData() {
     this.dataStorageService.storeRecipes()
       .subscribe(
@@ -25,5 +28,9 @@ export class HeaderComponent {
 
   onFetchData() {
     this.dataStorageService.getRecipes();
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 }
