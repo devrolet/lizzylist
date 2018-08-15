@@ -15,13 +15,13 @@ export class DataStorageService {
   storeRecipes() {
     const token = this.authService.getToken();
 
-    return this.http.put('https://lizzylist-a5830.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
+    return this.http.put('Firebase Link Here' + token, this.recipeService.getRecipes());
   }
 
   getRecipes() {
     const token = this.authService.getToken();
 
-    this.http.get('https://lizzylist-a5830.firebaseio.com/recipes.json?auth=' + token)
+    this.http.get('Firebase Link Here' + token)
       .map(
         (response: Response) => {
           const recipes: Recipe[] = response.json();
