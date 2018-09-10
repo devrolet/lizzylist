@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## NOTE!!
 
-LizzyList will not load recipes without the Firebase link. The link is available upon request for select hiring managers.
+LizzyList will not load recipes without the link to Firebase. The link is available upon request for select individuals/organizations.
 
 ## Code scaffolding
 
