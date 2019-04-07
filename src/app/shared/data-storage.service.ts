@@ -15,16 +15,16 @@ export class DataStorageService {
   storeRecipes() {
     const token = this.authService.getToken();
 
-    return this.httpClient.put('Firebase Link Here' + token, this.recipeService.getRecipes());
+    return this.httpClient.put('https://lizzylist-a5830.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
   }
 
   getRecipes() {
     const token = this.authService.getToken();
 
-    this.httpClient.get<Recipe[]>('Firebase Link Here' + token)
+    this.httpClient.get<Recipe[]>('https://lizzylist-a5830.firebaseio.com/recipes.json?auth=' + token)
       .map(
         (recipes) => {
-          for (const recipe of recipes) {
+          for (let recipe of recipes) {
             if (!recipe['ingredients']) {
               console.log(recipe);
               recipe['ingredients'] = [];
