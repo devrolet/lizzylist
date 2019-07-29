@@ -13,3 +13,6 @@ export class Recipe {
         this.ingredients = ingredients;
     }
 }
+
+// Video Path
+// public videoPath: string | videoPath: string | this.videoPath = videoPath
