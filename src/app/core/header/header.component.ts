@@ -10,10 +10,10 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  title = 'LizzyList';
-  name = 'Elizabeth Hill';
-  desc = `LizzyList is a recipe book and shopping app built for my lovely wife Elizabeth Hill.
-          This way she can get off my case about grocery shopping`;
+  // title = 'LizzyList';
+  // name = 'Elizabeth Hill';
+  // desc = `LizzyList is a recipe book and shopping app built for my lovely wife Elizabeth Hill.
+  //         This way she can get off my case about grocery shopping`;
   constructor(private dataStorageService: DataStorageService,
               private authService: AuthService) {}
 
